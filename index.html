@@ -45,6 +45,23 @@
 			<div class="vertical-center">
 				<div class="pre-inner">
 					<div class="load typing-load"><p>Loading...</p></div>
+					<div class="numb">
+						<strong>
+							0%
+						</strong>
+					</div>
+					<script>
+						const numb = document.querySelector(".numb");
+						let counter = 0;
+						setInterval(()=>{
+						  if(counter == 100){
+							clearInterval();
+						  }else{
+							counter+=1;
+							numb.textContent = counter + "%";
+						  }
+						}, 80);
+					</script>
 					<span class="typed-load"></span>
 				</div>
 			</div>
